@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Empregos - Instituto Reinserir</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <a href="index.html" class="logo">
+        <img src="logo-reinserir-horizontal.png" alt="Instituto Reinserir">
+    </a>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="perfil.html">Meu Perfil</a>
+        <a href="oportunidades.html">Oportunidades</a>
+        <a href="estudos.html">Estudos</a>
+        <a href="empregos.html">Empregos</a>
+        <a href="talentos.html">Talentos</a>
+    </nav>
+
+    <a href="login.html" class="botao-menu">Sair</a>
+
+</header>
+
+
+<main class="pagina-empregos">
+
+    <!-- CABEÇALHO DA PÁGINA -->
+
+    <section class="empregos-topo">
+
+        <div>
+
+            <p class="subtitulo">OPORTUNIDADES PROFISSIONAIS</p>
+
+            <h1>Encontre seu próximo emprego.</h1>
+
+            <p>
+                Conclua os cursos do Instituto Reinserir, desenvolva suas habilidades
+                e encontre oportunidades profissionais relacionadas à sua formação.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- AVISO -->
+
+    <section class="empregos-aviso">
+
+        <div class="empregos-aviso-icone">
+            🎓
+        </div>
+
+        <div>
+            <h2>Como funciona?</h2>
+
+            <p>
+                Cada oportunidade está relacionada a um dos cursos disponíveis
+                no Instituto Reinserir. Para se candidatar, você precisa concluir
+                o curso correspondente.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- LISTA DE EMPREGOS -->
+
+    <section class="lista-empregos">
+
+        <div class="titulo-secao-empregos">
+
+            <div>
+                <p class="subtitulo">VAGAS DISPONÍVEIS</p>
+                <h2>Oportunidades profissionais</h2>
+            </div>
+
+            <span class="contador-empregos">
+                7 oportunidades
+            </span>
+
+        </div>
+
+
+        <!-- ORGANIZA+ -->
+
+        <article class="emprego-card" data-curso="administrativo">
+
+            <div class="emprego-icone">
+                📋
+            </div>
+
+            <div class="emprego-conteudo">
+
+                <span class="emprego-area">
+                    ADMINISTRAÇÃO
+                </span>
+
+                <h2>Auxiliar Administrativo</h2>
+
+                <h3>Organiza+</h3>
+
+                <p>
+                    Empresa especializada em organização de documentos,
+                    agendas, arquivos e rotinas administrativas.
+                </p>
+
+                <div class="emprego-curso">
+
+                    <span>🎓 Curso necessário:</span>
+
+                    <strong>Auxiliar Administrativo</strong>
+
+                </div>
+
+                <div class="emprego-status" id="status-emprego-administrativo">
+                    🔒 Conclua o curso para desbloquear esta oportunidade.
+                </div>
+
+                <button
+                    class="botao-emprego"
+                    data-curso="administrativo"
+                    disabled>
+                    🔒 Concluir curso primeiro
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- DINHEIRO FÁCIL -->
+
+        <article class="emprego-card" data-curso="financeira">
+
+            <div class="emprego-icone">
+                💰
+            </div>
+
+            <div class="emprego-conteudo">
+
+                <span class="emprego-area">
+                    FINANÇAS
+                </span>
+
+                <h2>Assistente Financeiro</h2>
+
+                <h3>Dinheiro Fácil</h3>
+
+                <p>
+                    Empresa que ensina pessoas a organizar o orçamento,
+                    economizar e planejar melhor seus gastos.
+                </p>
+
+                <div class="emprego-curso">
+
+                    <span>🎓 Curso necessário:</span>
+
+                    <strong>Educação Financeira</strong>
+
+                </div>
+
+                <div class="emprego-status" id="status-emprego-financeira">
+                    🔒 Conclua o curso para desbloquear esta oportunidade.
+                </div>
+
+                <button
+                    class="botao-emprego"
+                    data-curso="financeira"
+                    disabled>
+                    🔒 Concluir curso primeiro
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- PRÓ-FUTURO -->
+
+        <article class="emprego-card" data-curso="mercado">
+
+            <div class="emprego-icone">
+                🚀
+            </div>
+
+            <div class="emprego-conteudo">
+
+                <span class="emprego-area">
+                    CARREIRA
+                </span>
+
+                <h2>Assistente de Desenvolvimento Profissional</h2>
+
+                <h3>Pró-Futuro</h3>
+
+                <p>
+                    Empresa que prepara jovens para o mercado de trabalho,
+                    com cursos, currículo e orientação profissional.
+                </p>
+
+                <div class="emprego-curso">
+
+                    <span>🎓 Curso necessário:</span>
+
+                    <strong>Preparação para o Mercado</strong>
+
+                </div>
+
+                <div class="emprego-status" id="status-emprego-mercado">
+                    🔒 Conclua o curso para desbloquear esta oportunidade.
+                </div>
+
+                <button
+                    class="botao-emprego"
+                    data-curso="mercado"
+                    disabled>
+                    🔒 Concluir curso primeiro
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- CLIENTE FELIZ -->
+
+        <article class="emprego-card" data-curso="atendimento">
+
+            <div class="emprego-icone">
+                🤝
+            </div>
+
+            <div class="emprego-conteudo">
+
+                <span class="emprego-area">
+                    ATENDIMENTO
+                </span>
+
+                <h2>Atendente de Relacionamento</h2>
+
+                <h3>Cliente Feliz</h3>
+
+                <p>
+                    Empresa focada em melhorar o atendimento, ensinando
+                    técnicas de comunicação e relacionamento com clientes.
+                </p>
+
+                <div class="emprego-curso">
+
+                    <span>🎓 Curso necessário:</span>
+
+                    <strong>Atendimento ao Cliente</strong>
+
+                </div>
+
+                <div class="emprego-status" id="status-emprego-atendimento">
+                    🔒 Conclua o curso para desbloquear esta oportunidade.
+                </div>
+
+                <button
+                    class="botao-emprego"
+                    data-curso="atendimento"
+                    disabled>
+                    🔒 Concluir curso primeiro
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- IDEIA CERTA -->
+
+        <article class="emprego-card" data-curso="empreendedorismo">
+
+            <div class="emprego-icone">
+                💡
+            </div>
+
+            <div class="emprego-conteudo">
+
+                <span class="emprego-area">
+                    NEGÓCIOS
+                </span>
+
+                <h2>Assistente de Negócios</h2>
+
+                <h3>Ideia Certa</h3>
+
+                <p>
+                    Empresa que ajuda pessoas a transformar ideias em pequenos
+                    negócios e aprender a administrá-los.
+                </p>
+
+                <div class="emprego-curso">
+
+                    <span>🎓 Curso necessário:</span>
+
+                    <strong>Empreendedorismo</strong>
+
+                </div>
+
+                <div class="emprego-status" id="status-emprego-empreendedorismo">
+                    🔒 Conclua o curso para desbloquear esta oportunidade.
+                </div>
+
+                <button
+                    class="botao-emprego"
+                    data-curso="empreendedorismo"
+                    disabled>
+                    🔒 Concluir curso primeiro
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- FALA BEM -->
+
+        <article class="emprego-card" data-curso="comunicacao">
+
+            <div class="emprego-icone">
+                🗣️
+            </div>
+
+            <div class="emprego-conteudo">
+
+                <span class="emprego-area">
+                    COMUNICAÇÃO
+                </span>
+
+                <h2>Assistente de Comunicação</h2>
+
+                <h3>Fala Bem</h3>
+
+                <p>
+                    Empresa que oferece treinamento para melhorar a comunicação,
+                    apresentações e postura no ambiente profissional.
+                </p>
+
+                <div class="emprego-curso">
+
+                    <span>🎓 Curso necessário:</span>
+
+                    <strong>Comunicação Profissional</strong>
+
+                </div>
+
+                <div class="emprego-status" id="status-emprego-comunicacao">
+                    🔒 Conclua o curso para desbloquear esta oportunidade.
+                </div>
+
+                <button
+                    class="botao-emprego"
+                    data-curso="comunicacao"
+                    disabled>
+                    🔒 Concluir curso primeiro
+                </button>
+
+            </div>
+
+        </article>
+
+
+        <!-- TECNO FÁCIL -->
+
+        <article class="emprego-card" data-curso="informatica">
+
+            <div class="emprego-icone">
+                💻
+            </div>
+
+            <div class="emprego-conteudo">
+
+                <span class="emprego-area">
+                    TECNOLOGIA
+                </span>
+
+                <h2>Auxiliar de Informática</h2>
+
+                <h3>Tecno Fácil</h3>
+
+                <p>
+                    Empresa que ensina conhecimentos básicos de informática,
+                    como Word, Excel, internet e uso do computador.
+                </p>
+
+                <div class="emprego-curso">
+
+                    <span>🎓 Curso necessário:</span>
+
+                    <strong>Informática Básica</strong>
+
+                </div>
+
+                <div class="emprego-status" id="status-emprego-informatica">
+                    🔒 Conclua o curso para desbloquear esta oportunidade.
+                </div>
+
+                <button
+                    class="botao-emprego"
+                    data-curso="informatica"
+                    disabled>
+                    🔒 Concluir curso primeiro
+                </button>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- CHAMADA FINAL -->
+
+    <section class="chamada-final">
+
+        <div>
+
+            <p class="subtitulo">
+                CONSTRUA SUA TRAJETÓRIA
+            </p>
+
+            <h2>
+                Seu próximo passo pode começar com um curso.
+            </h2>
+
+            <p>
+                Continue aprendendo, desenvolvendo suas habilidades e
+                preparando-se para novas oportunidades profissionais.
+            </p>
+
+            <a href="oportunidades.html" class="botao-principal">
+                Ver oportunidades →
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <a href="index.html" class="logo">
+        <img src="logo-reinserir-horizontal.png" alt="Instituto Reinserir">
+    </a>
+
+    <p>
+        Educação, capacitação e oportunidades para novos começos.
+    </p>
+
+    <p class="copyright">
+        © 2026 Instituto Reinserir — Protótipo educacional
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

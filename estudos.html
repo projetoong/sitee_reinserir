@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Estudos - Instituto Reinserir</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =====================================================
+           PÁGINA ESTUDOS
+        ===================================================== */
+
+        .estudos-main {
+            width: min(1160px, 92%);
+            margin: 0 auto;
+            padding: 55px 0 75px;
+        }
+
+        .estudos-topo {
+            text-align: center;
+            max-width: 850px;
+            margin: 0 auto 40px;
+        }
+
+        .estudos-topo h1 {
+            margin: 10px 0 15px;
+            font-size: 48px;
+            line-height: 1.1;
+        }
+
+        .estudos-topo p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+        .estudos-layout {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 25px;
+            align-items: start;
+        }
+
+        /* =====================================================
+           MENU
+        ===================================================== */
+
+        .menu-estudos {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 16px;
+            padding: 15px;
+            position: sticky;
+            top: 100px;
+        }
+
+        .menu-estudos h2 {
+            margin: 5px 9px 15px;
+            font-size: 18px;
+        }
+
+        .curso-btn {
+            display: block;
+            width: 100%;
+            border: 0;
+            background: var(--verde-suave, #fff7ef);
+            color: #26352d;
+            text-align: left;
+            padding: 13px;
+            margin: 7px 0;
+            border-radius: 10px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .curso-btn:hover {
+            background: var(--verde-claro, #fff1e6);
+        }
+
+        .curso-btn.ativo {
+            background: var(--verde, #ff6a00);
+            color: #fff;
+        }
+
+        /* =====================================================
+           ARTIGO
+        ===================================================== */
+
+        .artigo-estudo {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 16px;
+            padding: 38px;
+            box-shadow: 0 7px 24px rgba(25, 60, 45, 0.06);
+        }
+
+        .artigo-estudo h2 {
+            font-size: 32px;
+            line-height: 1.2;
+            margin: 0 0 8px;
+        }
+
+        .artigo-estudo h3 {
+            font-size: 21px;
+            margin: 32px 0 10px;
+        }
+
+        .artigo-estudo h4 {
+            font-size: 17px;
+            margin: 20px 0 7px;
+        }
+
+        .artigo-estudo p {
+            line-height: 1.8;
+            margin-bottom: 13px;
+        }
+
+        .artigo-estudo ul {
+            line-height: 1.8;
+            padding-left: 25px;
+        }
+
+        .artigo-estudo li {
+            margin-bottom: 7px;
+        }
+
+        .categoria-estudo {
+            display: inline-block;
+            background: var(--verde-claro, #fff1e6);
+            color: var(--verde-escuro, #e85d00);
+            border-radius: 20px;
+            padding: 4px 11px;
+            font-size: 12px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .aviso-estudo {
+            background: var(--verde-fundo, #fff7ef);
+            border-left: 4px solid var(--verde, #ff6a00);
+            padding: 15px;
+            margin: 25px 0;
+            border-radius: 7px;
+        }
+
+        .caixa-destaque {
+            background: #fafafa;
+            border: 1px solid #e3e3e3;
+            border-radius: 12px;
+            padding: 18px;
+            margin: 22px 0;
+        }
+
+        .caixa-destaque strong {
+            display: block;
+            margin-bottom: 7px;
+        }
+
+        /* =====================================================
+           VÍDEO
+        ===================================================== */
+
+        .video-area {
+            margin: 32px 0 38px;
+        }
+
+        .video-area h3 {
+            margin-top: 0;
+        }
+
+        .video-container {
+            width: 100%;
+            background: #111;
+            border-radius: 14px;
+            overflow: hidden;
+            margin-top: 12px;
+        }
+
+        .video-container video {
+            display: block;
+            width: 100%;
+            max-height: 520px;
+            background: #000;
+        }
+
+        .video-legenda {
+            font-size: 13px;
+            opacity: 0.75;
+            margin-top: 8px;
+        }
+
+        /* =====================================================
+           RESPONSIVO
+        ===================================================== */
+
+        @media (max-width: 800px) {
+
+            .estudos-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .menu-estudos {
+                position: static;
+            }
+
+            .artigo-estudo {
+                padding: 25px;
+            }
+
+            .estudos-topo h1 {
+                font-size: 38px;
+            }
+
+            .video-container video {
+                max-height: none;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+<!-- =====================================================
+     CABEÇALHO
+===================================================== -->
+
+<header>
+
+    <div class="logo">
+        INSTITUTO <span>REINSERIR</span>
+    </div>
+
+    <nav>
+
+        <a href="index.html">
+            Início
+        </a>
+
+        <a href="perfil.html">
+            Meu Perfil
+        </a>
+
+        <a href="vagas.html">
+            Oportunidades
+        </a>
+
+        <a href="estudos.html" class="ativo">
+            Estudos
+        </a>
+
+        <a href="empregos.html">
+            Empregos
+        </a>
+
+        <a href="talentos.html">
+            Talentos
+        </a>
+
+    </nav>
+
+    <a href="login.html" class="botao-menu">
+        Sair
+    </a>
+
+</header>
+
+
+<!-- =====================================================
+     CONTEÚDO
+===================================================== -->
+
+<main class="estudos-main">
+
+    <section class="estudos-topo">
+
+        <p class="subtitulo">
+            APRENDA E DESENVOLVA-SE
+        </p>
+
+        <h1>
+            Estudos
+        </h1>
+
+        <p>
+            Explore conteúdos de capacitação e desenvolvimento
+            profissional. Escolha um curso para acessar o
+            material de estudo, assistir à aula e ampliar seus
+            conhecimentos.
+        </p>
+
+    </section>
+
+
+    <div class="estudos-layout">
+
+        <!-- MENU DOS CURSOS -->
+
+        <aside class="menu-estudos">
+
+            <h2>
+                📚 Cursos disponíveis
+            </h2>
+
+            <button class="curso-btn ativo"
+                    onclick="abrirCurso('informatica', this)">
+                💻 Informática Básica
+            </button>
+
+            <button class="curso-btn"
+                    onclick="abrirCurso('administrativo', this)">
+                📋 Auxiliar Administrativo
+            </button>
+
+            <button class="curso-btn"
+                    onclick="abrirCurso('financeira', this)">
+                💰 Educação Financeira
+            </button>
+
+            <button class="curso-btn"
+                    onclick="abrirCurso('comunicacao', this)">
+                🗣️ Comunicação Profissional
+            </button>
+
+            <button class="curso-btn"
+                    onclick="abrirCurso('atendimento', this)">
+                🎧 Atendimento ao Cliente
+            </button>
+
+            <button class="curso-btn"
+                    onclick="abrirCurso('mercado', this)">
+                🤝 Preparação para o Mercado de Trabalho
+            </button>
+
+            <button class="curso-btn"
+                    onclick="abrirCurso('empreendedorismo', this)">
+                🚀 Empreendedorismo
+            </button>
+
+        </aside>
+
+
+        <!-- CONTEÚDO -->
+
+        <article
+            class="artigo-estudo"
+            id="conteudo-curso">
+        </article>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <strong>
+        INSTITUTO REINSERIR
+    </strong>
+
+    <br>
+
+    Educação, capacitação e oportunidades para novos caminhos.
+
+</footer>
+
+
+<script>
+
+/* =========================================================
+   BANCO DE CONTEÚDO DOS CURSOS
+========================================================= */
+
+const cursos = {
+
+    /* =====================================================
+       INFORMÁTICA
+    ===================================================== */
+
+    informatica: {
+
+        nome: "Informática Básica",
+
+        categoria: "TECNOLOGIA",
+
+        video: "videos/informatica.mp4",
+
+        introducao:
+            "A informática está presente em praticamente todas as áreas da vida profissional e acadêmica. Conhecer as ferramentas digitais básicas ajuda o participante a utilizar computadores com mais autonomia, segurança e produtividade.",
+
+        secoes: [
+
+            {
+                titulo: "1. O que é informática?",
+                texto: `
+                    <p>
+                        Informática é a área relacionada ao processamento,
+                        armazenamento, organização e transmissão de
+                        informações utilizando recursos tecnológicos.
+                    </p>
+
+                    <p>
+                        Atualmente, conhecimentos básicos de informática
+                        são importantes em diversos ambientes profissionais.
+                        Empresas utilizam computadores para registrar
+                        informações, produzir documentos, controlar dados,
+                        realizar comunicações e executar diferentes tarefas.
+                    </p>
+
+                    <div class="caixa-destaque">
+                        <strong>💡 Por que aprender informática?</strong>
+                        O domínio das ferramentas digitais pode facilitar
+                        atividades de estudo, trabalho, comunicação e
+                        organização pessoal.
+                    </div>
+                `
+            },
+
+            {
+                titulo: "2. Hardware e software",
+                texto: `
+                    <p>
+                        O computador possui componentes físicos e programas.
+                        Os componentes físicos são chamados de
+                        <strong>hardware</strong>.
+                    </p>
+
+                    <p>
+                        Já os programas e sistemas utilizados no computador
+                        são chamados de <strong>software</strong>.
+                    </p>
+
+                    <ul>
+                        <li>Teclado: permite inserir informações.</li>
+                        <li>Mouse: facilita a interação com a interface.</li>
+                        <li>Monitor: apresenta informações visualmente.</li>
+                        <li>Armazenamento: guarda arquivos e dados.</li>
+                        <li>Memória RAM: auxilia na execução das tarefas.</li>
+                    </ul>
+                `
+            },
+
+            {
+                titulo: "3. Sistema operacional",
+                texto: `
+                    <p>
+                        O sistema operacional é responsável por administrar
+                        diversos recursos do computador e permitir que o
+                        usuário utilize programas e arquivos.
+                    </p>
+
+                    <p>
+                        Entre as atividades básicas estão criar pastas,
+                        organizar documentos, abrir programas, localizar
+                        arquivos e configurar diferentes recursos.
+                    </p>
+
+                    <p>
+                        Saber organizar arquivos é especialmente importante
+                        no ambiente profissional, pois facilita a localização
+                        das informações e reduz a possibilidade de perda ou
+                        confusão entre documentos.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "4. Internet e navegadores",
+                texto: `
+                    <p>
+                        A internet permite acessar informações, serviços,
+                        plataformas de aprendizagem e ferramentas de
+                        comunicação.
+                    </p>
+
+                    <p>
+                        Navegadores são programas utilizados para acessar
+                        páginas da internet. Entre suas funções estão abrir
+                        sites, realizar pesquisas, acessar sistemas e
+                        utilizar plataformas digitais.
+                    </p>
+
+                    <p>
+                        Ao realizar uma pesquisa, é importante analisar as
+                        informações encontradas e verificar se a fonte é
+                        confiável.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "5. Segurança digital",
+                texto: `
+                    <p>
+                        A utilização da internet exige alguns cuidados.
+                        Informações pessoais, senhas e documentos devem ser
+                        protegidos.
+                    </p>
+
+                    <ul>
+                        <li>Evite compartilhar senhas.</li>
+                        <li>Desconfie de links desconhecidos.</li>
+                        <li>Tenha cuidado com arquivos recebidos.</li>
+                        <li>Evite fornecer dados pessoais em páginas suspeitas.</li>
+                        <li>Mantenha programas e sistemas atualizados.</li>
+                    </ul>
+                `
+            },
+
+            {
+                titulo: "6. Informática no ambiente profissional",
+                texto: `
+                    <p>
+                        Em diferentes profissões, conhecimentos digitais
+                        podem ser utilizados para criar documentos,
+                        organizar informações, enviar mensagens,
+                        preencher registros e utilizar sistemas internos.
+                    </p>
+
+                    <p>
+                        Por isso, aprender informática básica não significa
+                        apenas saber utilizar um computador. Significa também
+                        desenvolver autonomia para aprender novas ferramentas
+                        conforme as necessidades do trabalho.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "7. Conclusão",
+                texto: `
+                    <p>
+                        A informática básica é uma das competências que pode
+                        contribuir para a inclusão digital e profissional.
+                        Quanto maior for a familiaridade com as ferramentas,
+                        maior tende a ser a autonomia para realizar tarefas
+                        digitais.
+                    </p>
+                `
+            }
+
+        ]
+    },
+
+
+    /* =====================================================
+       AUXILIAR ADMINISTRATIVO
+    ===================================================== */
+
+    administrativo: {
+
+        nome: "Auxiliar Administrativo",
+
+        categoria: "ADMINISTRAÇÃO",
+
+        video: "videos/administrativo.mp4",
+
+        introducao:
+            "O auxiliar administrativo exerce atividades de apoio que ajudam uma organização a manter seus processos, documentos e informações organizados.",
+
+        secoes: [
+
+            {
+                titulo: "1. O que faz um auxiliar administrativo?",
+                texto: `
+                    <p>
+                        O auxiliar administrativo pode atuar em empresas,
+                        instituições, organizações e diferentes setores.
+                        Suas atividades variam conforme o local de trabalho.
+                    </p>
+
+                    <p>
+                        Entre as tarefas possíveis estão organização de
+                        documentos, preenchimento de registros, atendimento,
+                        controle de informações, apoio à equipe e utilização
+                        de ferramentas digitais.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "2. Organização de documentos",
+                texto: `
+                    <p>
+                        A organização documental é importante para que
+                        informações possam ser encontradas rapidamente
+                        quando forem necessárias.
+                    </p>
+
+                    <p>
+                        Documentos digitais devem possuir nomes claros,
+                        pastas organizadas e critérios consistentes de
+                        armazenamento.
+                    </p>
+
+                    <div class="caixa-destaque">
+                        <strong>📁 Uma boa organização evita problemas</strong>
+                        Arquivos organizados facilitam o trabalho da equipe
+                        e diminuem o tempo gasto procurando informações.
+                    </div>
+                `
+            },
+
+            {
+                titulo: "3. Rotinas administrativas",
+                texto: `
+                    <p>
+                        As rotinas administrativas podem envolver diferentes
+                        tarefas, como elaboração de documentos, atualização
+                        de cadastros, organização de agendas, registro de
+                        informações e encaminhamento de solicitações.
+                    </p>
+
+                    <p>
+                        A atenção aos detalhes é importante porque pequenos
+                        erros em documentos ou registros podem causar
+                        dificuldades para outros setores.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "4. Atendimento e comunicação",
+                texto: `
+                    <p>
+                        O profissional administrativo pode ter contato com
+                        clientes, fornecedores, colegas e visitantes.
+                    </p>
+
+                    <p>
+                        Por isso, deve procurar utilizar uma comunicação
+                        educada, clara e objetiva, além de ouvir atentamente
+                        as solicitações recebidas.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "5. Organização do tempo",
+                texto: `
+                    <p>
+                        Organizar as tarefas ajuda a estabelecer prioridades
+                        e acompanhar atividades que precisam ser realizadas.
+                    </p>
+
+                    <ul>
+                        <li>Identificar tarefas urgentes.</li>
+                        <li>Registrar compromissos.</li>
+                        <li>Definir prioridades.</li>
+                        <li>Acompanhar prazos.</li>
+                        <li>Conferir tarefas concluídas.</li>
+                    </ul>
+                `
+            },
+
+            {
+                titulo: "6. Postura profissional",
+                texto: `
+                    <p>
+                        A postura profissional envolve responsabilidade,
+                        respeito, organização, pontualidade e disposição
+                        para aprender.
+                    </p>
+
+                    <p>
+                        Também é importante respeitar informações internas
+                        e tratar colegas e público com educação.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "7. Conclusão",
+                texto: `
+                    <p>
+                        O trabalho administrativo exige organização,
+                        atenção e capacidade de comunicação. O desenvolvimento
+                        dessas habilidades pode ajudar o profissional a
+                        executar suas atividades com maior segurança.
+                    </p>
+                `
+            }
+
+        ]
+    },
+
+
+    /* =====================================================
+       EDUCAÇÃO FINANCEIRA
+    ===================================================== */
+
+    financeira: {
+
+        nome: "Educação Financeira",
+
+        categoria: "FINANÇAS",
+
+        video: "videos/financeira.mp4",
+
+        introducao:
+            "A educação financeira ajuda a compreender a relação com o dinheiro, organizar receitas e despesas e estabelecer objetivos financeiros.",
+
+        secoes: [
+
+            {
+                titulo: "1. O que é educação financeira?",
+                texto: `
+                    <p>
+                        Educação financeira é o desenvolvimento de
+                        conhecimentos e hábitos relacionados à utilização
+                        consciente dos recursos financeiros.
+                    </p>
+
+                    <p>
+                        O objetivo não é simplesmente gastar menos, mas
+                        compreender a própria realidade financeira e tomar
+                        decisões mais organizadas.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "2. Receitas e despesas",
+                texto: `
+                    <p>
+                        Receita é o dinheiro recebido. Despesa é o dinheiro
+                        utilizado para pagar produtos, serviços ou outras
+                        necessidades.
+                    </p>
+
+                    <p>
+                        Registrar essas informações permite visualizar como
+                        os recursos estão sendo utilizados.
+                    </p>
+
+                    <ul>
+                        <li>Moradia.</li>
+                        <li>Alimentação.</li>
+                        <li>Transporte.</li>
+                        <li>Educação.</li>
+                        <li>Lazer.</li>
+                        <li>Contas e serviços.</li>
+                    </ul>
+                `
+            },
+
+            {
+                titulo: "3. Planejamento financeiro",
+                texto: `
+                    <p>
+                        Planejar significa observar a situação atual,
+                        estabelecer objetivos e pensar em como utilizar os
+                        recursos disponíveis.
+                    </p>
+
+                    <p>
+                        Um planejamento pode ser mensal, anual ou relacionado
+                        a um objetivo específico.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "4. Necessidades e desejos",
+                texto: `
+                    <p>
+                        Diferenciar necessidades de desejos pode ajudar na
+                        organização das prioridades.
+                    </p>
+
+                    <p>
+                        Uma necessidade está relacionada a algo importante
+                        para determinada situação. Um desejo representa algo
+                        que a pessoa gostaria de adquirir, mas que pode não
+                        ser essencial naquele momento.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "5. Consumo consciente",
+                texto: `
+                    <p>
+                        Antes de realizar uma compra, pode ser útil comparar
+                        preços, verificar condições de pagamento e avaliar
+                        se a aquisição cabe no planejamento.
+                    </p>
+
+                    <p>
+                        O consumo consciente também envolve evitar compras
+                        impulsivas e analisar a real necessidade de cada
+                        aquisição.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "6. Metas financeiras",
+                texto: `
+                    <p>
+                        Uma meta financeira é um objetivo relacionado ao uso
+                        ou à organização do dinheiro.
+                    </p>
+
+                    <p>
+                        Uma meta pode ser dividida em etapas menores para
+                        facilitar o acompanhamento do progresso.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "7. Conclusão",
+                texto: `
+                    <p>
+                        A educação financeira é uma habilidade que pode ser
+                        desenvolvida ao longo do tempo. Conhecer receitas,
+                        despesas, prioridades e objetivos ajuda a construir
+                        uma relação mais organizada com os recursos.
+                    </p>
+                `
+            }
+
+        ]
+    },
+
+
+    /* =====================================================
+       COMUNICAÇÃO PROFISSIONAL
+    ===================================================== */
+
+    comunicacao: {
+
+        nome: "Comunicação Profissional",
+
+        categoria: "DESENVOLVIMENTO",
+
+        video: "videos/comunicacao.mp4",
+
+        introducao:
+            "A comunicação profissional envolve transmitir informações de maneira clara, respeitosa e adequada a diferentes situações do ambiente de trabalho.",
+
+        secoes: [
+
+            {
+                titulo: "1. O que é comunicação profissional?",
+                texto: `
+                    <p>
+                        Comunicação profissional é a utilização consciente
+                        da linguagem para transmitir informações,
+                        apresentar ideias, fazer solicitações e construir
+                        relações no ambiente de trabalho.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "2. Comunicação verbal",
+                texto: `
+                    <p>
+                        A comunicação verbal utiliza palavras para transmitir
+                        informações. Clareza, objetividade e organização
+                        ajudam o interlocutor a compreender a mensagem.
+                    </p>
+
+                    <p>
+                        O vocabulário também deve ser adaptado à situação e
+                        ao público.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "3. Comunicação não verbal",
+                texto: `
+                    <p>
+                        Expressões faciais, postura, gestos e tom de voz
+                        também participam da comunicação.
+                    </p>
+
+                    <p>
+                        Por isso, uma mensagem profissional envolve não
+                        apenas aquilo que é dito, mas também a forma como
+                        é transmitida.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "4. Escuta ativa",
+                texto: `
+                    <p>
+                        Escutar ativamente significa prestar atenção à pessoa
+                        que está falando, compreender a informação e buscar
+                        esclarecer dúvidas quando necessário.
+                    </p>
+
+                    <ul>
+                        <li>Evitar interrupções desnecessárias.</li>
+                        <li>Prestar atenção ao conteúdo.</li>
+                        <li>Fazer perguntas quando houver dúvida.</li>
+                        <li>Confirmar informações importantes.</li>
+                    </ul>
+                `
+            },
+
+            {
+                titulo: "5. Falar em público",
+                texto: `
+                    <p>
+                        Falar em público é uma habilidade que pode ser
+                        desenvolvida com preparação e prática.
+                    </p>
+
+                    <p>
+                        Uma apresentação pode ser organizada em introdução,
+                        desenvolvimento e conclusão.
+                    </p>
+
+                    <p>
+                        Conhecer o assunto e ensaiar previamente pode ajudar
+                        a organizar melhor as ideias.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "6. Comunicação escrita",
+                texto: `
+                    <p>
+                        E-mails e mensagens profissionais devem apresentar
+                        informações claras e organizadas.
+                    </p>
+
+                    <p>
+                        É importante observar o destinatário, o objetivo da
+                        mensagem e a linguagem utilizada.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "7. Conclusão",
+                texto: `
+                    <p>
+                        Uma boa comunicação contribui para o entendimento
+                        entre as pessoas e pode facilitar o desenvolvimento
+                        das atividades profissionais.
+                    </p>
+                `
+            }
+
+        ]
+    },
+
+
+    /* =====================================================
+       ATENDIMENTO AO CLIENTE
+    ===================================================== */
+
+    atendimento: {
+
+        nome: "Atendimento ao Cliente",
+
+        categoria: "ATENDIMENTO",
+
+        video: "videos/atendimento.mp4",
+
+        introducao:
+            "O atendimento ao cliente envolve comunicação, compreensão das necessidades, orientação e busca por soluções adequadas para cada situação.",
+
+        secoes: [
+
+            {
+                titulo: "1. O papel do atendimento",
+                texto: `
+                    <p>
+                        O atendimento representa um importante ponto de
+                        contato entre uma organização e seu público.
+                    </p>
+
+                    <p>
+                        O profissional responsável pelo atendimento deve
+                        procurar compreender a necessidade apresentada
+                        e orientar o cliente de forma adequada.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "2. Primeiro contato",
+                texto: `
+                    <p>
+                        O primeiro contato pode influenciar a experiência
+                        do cliente. Educação, atenção e clareza são
+                        importantes desde o início.
+                    </p>
+
+                    <p>
+                        É importante ouvir antes de oferecer uma resposta
+                        ou solução.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "3. Identificação da necessidade",
+                texto: `
+                    <p>
+                        Nem sempre a primeira informação apresentada pelo
+                        cliente explica completamente sua necessidade.
+                    </p>
+
+                    <p>
+                        Perguntas objetivas podem ajudar a compreender
+                        melhor a situação e direcionar o atendimento.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "4. Resolução de problemas",
+                texto: `
+                    <p>
+                        Quando existe um problema, o profissional deve
+                        reunir as informações necessárias e verificar
+                        quais procedimentos podem ser realizados.
+                    </p>
+
+                    <p>
+                        Quando não puder resolver diretamente, deve procurar
+                        encaminhar corretamente a situação.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "5. Reclamações e situações difíceis",
+                texto: `
+                    <p>
+                        Situações de insatisfação exigem atenção e
+                        comunicação respeitosa.
+                    </p>
+
+                    <p>
+                        Ouvir a reclamação, compreender os fatos e explicar
+                        os próximos passos pode ajudar a organizar o
+                        atendimento.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "6. Atendimento presencial e digital",
+                texto: `
+                    <p>
+                        O atendimento pode acontecer presencialmente,
+                        por telefone, e-mail, aplicativos ou outras
+                        ferramentas digitais.
+                    </p>
+
+                    <p>
+                        Em todos esses canais, clareza e respeito continuam
+                        sendo importantes.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "7. Conclusão",
+                texto: `
+                    <p>
+                        Um atendimento de qualidade depende de comunicação,
+                        atenção, organização e conhecimento dos procedimentos
+                        disponíveis.
+                    </p>
+                `
+            }
+
+        ]
+    },
+
+
+    /* =====================================================
+       MERCADO DE TRABALHO
+    ===================================================== */
+
+    mercado: {
+
+        nome: "Preparação para o Mercado de Trabalho",
+
+        categoria: "CARREIRA",
+
+        video: "videos/mercado.mp4",
+
+        introducao:
+            "A preparação para o mercado de trabalho envolve conhecer suas habilidades, organizar sua apresentação profissional e desenvolver competências importantes para diferentes ambientes.",
+
+        secoes: [
+
+            {
+                titulo: "1. Conhecendo suas habilidades",
+                texto: `
+                    <p>
+                        Antes de procurar uma oportunidade, é interessante
+                        refletir sobre conhecimentos, experiências,
+                        interesses e habilidades já desenvolvidas.
+                    </p>
+
+                    <p>
+                        Essa reflexão pode ajudar a identificar áreas nas
+                        quais existe interesse em aprender ou trabalhar.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "2. Currículo profissional",
+                texto: `
+                    <p>
+                        O currículo apresenta informações relacionadas à
+                        trajetória profissional e educacional de uma pessoa.
+                    </p>
+
+                    <p>
+                        Ele deve apresentar informações verdadeiras,
+                        organizadas e relevantes para a oportunidade.
+                    </p>
+
+                    <ul>
+                        <li>Dados de contato.</li>
+                        <li>Formação.</li>
+                        <li>Cursos.</li>
+                        <li>Experiências.</li>
+                        <li>Habilidades.</li>
+                    </ul>
+                `
+            },
+
+            {
+                titulo: "3. Procurando oportunidades",
+                texto: `
+                    <p>
+                        A busca por oportunidades pode acontecer por meio
+                        de plataformas digitais, empresas, instituições,
+                        indicações e redes profissionais.
+                    </p>
+
+                    <p>
+                        É importante observar os requisitos de cada vaga e
+                        apresentar informações adequadas à oportunidade.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "4. Entrevista de emprego",
+                texto: `
+                    <p>
+                        A entrevista permite que a organização conheça
+                        melhor o candidato e que o candidato compreenda
+                        melhor a oportunidade.
+                    </p>
+
+                    <p>
+                        Preparar-se previamente pode ajudar a organizar
+                        informações sobre experiências, objetivos e
+                        conhecimentos.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "5. Postura profissional",
+                texto: `
+                    <p>
+                        Diferentes ambientes de trabalho valorizam
+                        comportamentos como responsabilidade, respeito,
+                        pontualidade, organização e colaboração.
+                    </p>
+
+                    <p>
+                        A postura profissional também envolve saber receber
+                        orientações e aprender com novas experiências.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "6. Desenvolvimento contínuo",
+                texto: `
+                    <p>
+                        A aprendizagem profissional não termina quando
+                        uma pessoa consegue uma oportunidade.
+                    </p>
+
+                    <p>
+                        Novas tecnologias, processos e necessidades podem
+                        exigir atualização constante. Cursos, experiências
+                        práticas e estudo podem contribuir para esse
+                        desenvolvimento.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "7. Conclusão",
+                texto: `
+                    <p>
+                        Preparar-se para o mercado de trabalho envolve
+                        conhecimento, organização, comunicação e disposição
+                        para continuar aprendendo.
+                    </p>
+                `
+            }
+
+        ]
+    },
+
+
+    /* =====================================================
+       EMPREENDEDORISMO
+    ===================================================== */
+
+    empreendedorismo: {
+
+        nome: "Empreendedorismo",
+
+        categoria: "NEGÓCIOS",
+
+        video: "videos/empreendedorismo.mp4",
+
+        introducao:
+            "Empreendedorismo envolve identificar necessidades, desenvolver soluções, organizar recursos e transformar ideias em projetos ou atividades.",
+
+        secoes: [
+
+            {
+                titulo: "1. O que é empreendedorismo?",
+                texto: `
+                    <p>
+                        Empreendedorismo está relacionado à criação,
+                        desenvolvimento e organização de iniciativas que
+                        procuram atender determinadas necessidades.
+                    </p>
+
+                    <p>
+                        Empreender pode envolver abrir uma empresa,
+                        desenvolver um serviço, criar um projeto ou
+                        melhorar uma atividade existente.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "2. Identificação de oportunidades",
+                texto: `
+                    <p>
+                        Muitas ideias surgem da observação de problemas
+                        ou necessidades presentes no cotidiano.
+                    </p>
+
+                    <p>
+                        Observar as dificuldades das pessoas pode ajudar
+                        a identificar possibilidades de soluções.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "3. Público-alvo",
+                texto: `
+                    <p>
+                        Um projeto precisa considerar quem poderá utilizar
+                        determinado produto ou serviço.
+                    </p>
+
+                    <p>
+                        Conhecer o público ajuda a pensar na comunicação,
+                        no atendimento, nos preços e na forma de apresentar
+                        a solução.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "4. Proposta de valor",
+                texto: `
+                    <p>
+                        A proposta de valor explica qual problema o produto
+                        ou serviço procura resolver e quais benefícios
+                        pretende oferecer.
+                    </p>
+
+                    <div class="caixa-destaque">
+                        <strong>💡 Pergunta importante</strong>
+                        Que necessidade está sendo atendida e por que uma
+                        pessoa teria interesse nessa solução?
+                    </div>
+                `
+            },
+
+            {
+                titulo: "5. Planejamento",
+                texto: `
+                    <p>
+                        Planejar ajuda a transformar uma ideia em um projeto
+                        organizado.
+                    </p>
+
+                    <ul>
+                        <li>Definir objetivos.</li>
+                        <li>Conhecer o público.</li>
+                        <li>Identificar recursos necessários.</li>
+                        <li>Estimar custos.</li>
+                        <li>Planejar divulgação.</li>
+                        <li>Definir formas de acompanhamento.</li>
+                    </ul>
+                `
+            },
+
+            {
+                titulo: "6. Organização financeira do negócio",
+                texto: `
+                    <p>
+                        Uma atividade empreendedora também precisa considerar
+                        seus custos e receitas.
+                    </p>
+
+                    <p>
+                        Registrar entradas e saídas pode ajudar a acompanhar
+                        a situação financeira e compreender os resultados
+                        da atividade.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "7. Aprendizado e melhoria",
+                texto: `
+                    <p>
+                        Projetos podem precisar de ajustes ao longo do tempo.
+                        Observar resultados, ouvir clientes e analisar
+                        dificuldades pode ajudar a encontrar melhorias.
+                    </p>
+                `
+            },
+
+            {
+                titulo: "8. Conclusão",
+                texto: `
+                    <p>
+                        Empreender envolve planejamento, organização,
+                        criatividade, observação e disposição para aprender.
+                        Uma boa ideia precisa ser acompanhada de planejamento
+                        e compreensão das necessidades que pretende atender.
+                    </p>
+                `
+            }
+
+        ]
+    }
+
+};
+
+
+/* =========================================================
+   ABRIR CURSO
+========================================================= */
+
+function abrirCurso(id, botao) {
+
+    document
+        .querySelectorAll(".curso-btn")
+        .forEach(function(item) {
+            item.classList.remove("ativo");
+        });
+
+    botao.classList.add("ativo");
+
+    const curso = cursos[id];
+
+    let conteudo = `
+
+        <p class="subtitulo">
+            MATERIAL DE ESTUDO
+        </p>
+
+        <h2>
+            ${curso.nome}
+        </h2>
+
+        <span class="categoria-estudo">
+            ${curso.categoria}
+        </span>
+
+        <p>
+            ${curso.introducao}
+        </p>
+
+        <div class="aviso-estudo">
+            📖 Este material é somente para leitura.
+            As informações não podem ser editadas pelo participante.
+        </div>
+
+        <div class="video-area">
+
+            <h3>
+                🎥 Aula em vídeo
+            </h3>
+
+            <div class="video-container">
+
+                <video
+                    controls
+                    preload="metadata"
+                    playsinline
+                >
+
+                    <source
+                        src="${curso.video}"
+                        type="video/mp4"
+                    >
+
+                    Seu navegador não consegue reproduzir este vídeo.
+
+                </video>
+
+            </div>
+
+            <p class="video-legenda">
+                Assista à aula e depois continue a leitura do material.
+            </p>
+
+        </div>
+
+    `;
+
+
+    curso.secoes.forEach(function(secao) {
+
+        conteudo += `
+
+            <section>
+
+                <h3>
+                    ${secao.titulo}
+                </h3>
+
+                ${secao.texto}
+
+            </section>
+
+        `;
+
+    });
+
+
+    document
+        .getElementById("conteudo-curso")
+        .innerHTML = conteudo;
+
+}
+
+
+/* =========================================================
+   CURSO INICIAL
+========================================================= */
+
+abrirCurso(
+    "informatica",
+    document.querySelector(".curso-btn")
+);
+
+</script>
+
+</body>
+</html>
