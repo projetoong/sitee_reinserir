@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Oportunidades - Instituto Reinserir</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <a href="index.html" class="logo">
+        <img
+            src="logo-reinserir-horizontal.png"
+            alt="Instituto Reinserir"
+        >
+    </a>
+
+
+    <nav>
+
+        <a href="index.html">
+            Início
+        </a>
+
+        <a href="perfil.html">
+            Meu Perfil
+        </a>
+
+        <a href="oportunidades.html">
+            Oportunidades
+        </a>
+
+        <a href="estudos.html">
+            Estudos
+        </a>
+
+        <a href="empregos.html">
+            Empregos
+        </a>
+
+        <a href="talentos.html">
+            Talentos
+        </a>
+
+    </nav>
+
+
+    <a
+        href="login.html"
+        class="botao-menu"
+    >
+        Sair
+    </a>
+
+</header>
+
+
+
+<main class="pagina-cursos pagina-oportunidades">
+
+
+    <!-- =====================================================
+         TOPO
+    ====================================================== -->
+
+    <section class="cursos-topo">
+
+        <p class="subtitulo">
+            CAPACITAÇÃO + OPORTUNIDADE
+        </p>
+
+
+        <h1>
+            Prepare-se e encontre sua próxima oportunidade.
+        </h1>
+
+
+        <p>
+            Em um único espaço, você pode desenvolver novas
+            habilidades, acompanhar seus cursos e se preparar
+            para novas oportunidades profissionais.
+        </p>
+
+
+        <div
+            class="hero-botoes"
+            style="margin-top: 25px;"
+        >
+
+            <a
+                href="#cursos"
+                class="botao-principal"
+            >
+                Explorar cursos →
+            </a>
+
+
+            <a
+                href="empregos.html"
+                class="botao-secundario"
+            >
+                💼 Ver empregos →
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         JORNADA CONECTADA
+    ====================================================== -->
+
+    <section class="vagas-destaque">
+
+        <div>
+
+            <p class="subtitulo">
+                UMA JORNADA CONECTADA
+            </p>
+
+
+            <h2>
+                Aprenda, desenvolva seu perfil e prepare-se
+                para o mercado.
+            </h2>
+
+
+            <p>
+                Os cursos ajudam você a desenvolver habilidades
+                importantes para sua trajetória profissional.
+                Depois de concluir uma formação, novas
+                oportunidades de emprego relacionadas ao seu
+                aprendizado podem ser desbloqueadas.
+            </p>
+
+        </div>
+
+
+        <div class="vagas-destaque-icone">
+            💼
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ÁREA DO QUIZ
+    ====================================================== -->
+
+    <section
+        class="secao-cursos"
+        id="area-quiz"
+        hidden
+    >
+
+        <div class="quiz-cabecalho">
+
+            <span
+                class="categoria"
+                id="quiz-categoria"
+            ></span>
+
+
+            <h2
+                id="quiz-titulo"
+            ></h2>
+
+
+            <p id="quiz-instrucao">
+                Responda às 3 perguntas corretamente
+                para avançar 20%.
+            </p>
+
+        </div>
+
+
+
+        <div class="curso-progresso">
+
+            <div class="curso-barra">
+
+                <div
+                    class="curso-progresso-atual"
+                    id="quiz-barra-progresso"
+                    style="width: 0%"
+                ></div>
+
+            </div>
+
+
+            <span id="quiz-texto-progresso">
+                0%
+            </span>
+
+        </div>
+
+
+        <p id="quiz-etapa"></p>
+
+
+
+        <form id="formulario-quiz">
+
+            <div id="quiz-perguntas"></div>
+
+
+            <p
+                id="quiz-mensagem"
+                role="status"
+            ></p>
+
+
+            <button
+                class="botao-curso"
+                type="submit"
+            >
+                Conferir respostas
+            </button>
+
+
+            <button
+                class="botao-cancelar-curso"
+                type="button"
+                id="botao-sair-quiz"
+            >
+                Voltar aos cursos
+            </button>
+
+        </form>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CURSOS EM ANDAMENTO
+    ====================================================== -->
+
+    <section
+        class="secao-cursos cursos-inscritos"
+        id="meus-cursos"
+    >
+
+        <h2>
+            Seus cursos inscritos
+        </h2>
+
+
+        <div
+            class="grade-cursos"
+            id="cursos-em-andamento"
+        >
+
+            <p class="mensagem-sem-cursos">
+
+                Você ainda não iniciou nenhum curso.
+                Explore os cursos disponíveis abaixo!
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CURSOS
+    ====================================================== -->
+
+    <section
+        class="secao-cursos"
+        id="cursos"
+    >
+
+        <h2>
+            Explore novos cursos
+        </h2>
+
+
+        <div class="grade-cursos">
+
+
+
+            <!-- =================================================
+                 CURSO 1
+            ================================================== -->
+
+            <div class="curso-card">
+
+                <div class="curso-imagem">
+                    💻
+                </div>
+
+
+                <div class="curso-conteudo">
+
+                    <span class="categoria">
+                        TECNOLOGIA
+                    </span>
+
+
+                    <h3>
+                        Informática Básica
+                    </h3>
+
+
+                    <p>
+                        Aprenda ferramentas digitais essenciais
+                        para o mercado de trabalho.
+                    </p>
+
+
+                    <p class="duracao">
+                        ⏱ 15 horas
+                    </p>
+
+
+                    <button
+                        class="botao-curso"
+                        data-curso="informatica"
+                    >
+                        Inscrever-se
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CURSO 2
+            ================================================== -->
+
+            <div class="curso-card">
+
+                <div class="curso-imagem">
+                    📋
+                </div>
+
+
+                <div class="curso-conteudo">
+
+                    <span class="categoria">
+                        ADMINISTRAÇÃO
+                    </span>
+
+
+                    <h3>
+                        Auxiliar Administrativo
+                    </h3>
+
+
+                    <p>
+                        Aprenda rotinas administrativas,
+                        organização e fundamentos do ambiente
+                        corporativo.
+                    </p>
+
+
+                    <p class="duracao">
+                        ⏱ 20 horas
+                    </p>
+
+
+                    <button
+                        class="botao-curso"
+                        data-curso="administrativo"
+                    >
+                        Inscrever-se
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CURSO 3
+            ================================================== -->
+
+            <div class="curso-card">
+
+                <div class="curso-imagem">
+                    💰
+                </div>
+
+
+                <div class="curso-conteudo">
+
+                    <span class="categoria">
+                        FINANÇAS
+                    </span>
+
+
+                    <h3>
+                        Educação Financeira
+                    </h3>
+
+
+                    <p>
+                        Aprenda a organizar sua vida financeira
+                        e tomar melhores decisões.
+                    </p>
+
+
+                    <p class="duracao">
+                        ⏱ 12 horas
+                    </p>
+
+
+                    <button
+                        class="botao-curso"
+                        data-curso="financeira"
+                    >
+                        Inscrever-se
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CURSO 4
+            ================================================== -->
+
+            <div class="curso-card">
+
+                <div class="curso-imagem">
+                    🤝
+                </div>
+
+
+                <div class="curso-conteudo">
+
+                    <span class="categoria">
+                        CARREIRA
+                    </span>
+
+
+                    <h3>
+                        Preparação para o Mercado
+                    </h3>
+
+
+                    <p>
+                        Aprenda como criar currículos e se
+                        preparar para entrevistas de emprego.
+                    </p>
+
+
+                    <p class="duracao">
+                        ⏱ 10 horas
+                    </p>
+
+
+                    <button
+                        class="botao-curso"
+                        data-curso="mercado"
+                    >
+                        Inscrever-se
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CURSO 5
+            ================================================== -->
+
+            <div class="curso-card">
+
+                <div class="curso-imagem">
+                    🗣️
+                </div>
+
+
+                <div class="curso-conteudo">
+
+                    <span class="categoria">
+                        DESENVOLVIMENTO
+                    </span>
+
+
+                    <h3>
+                        Comunicação Profissional
+                    </h3>
+
+
+                    <p>
+                        Desenvolva sua comunicação e aprenda
+                        a se expressar melhor no ambiente
+                        profissional.
+                    </p>
+
+
+                    <p class="duracao">
+                        ⏱ 8 horas
+                    </p>
+
+
+                    <button
+                        class="botao-curso"
+                        data-curso="comunicacao"
+                    >
+                        Inscrever-se
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CURSO 6
+            ================================================== -->
+
+            <div class="curso-card">
+
+                <div class="curso-imagem">
+                    🎧
+                </div>
+
+
+                <div class="curso-conteudo">
+
+                    <span class="categoria">
+                        ATENDIMENTO
+                    </span>
+
+
+                    <h3>
+                        Atendimento ao Cliente
+                    </h3>
+
+
+                    <p>
+                        Desenvolva técnicas de atendimento,
+                        relacionamento e comunicação com
+                        clientes.
+                    </p>
+
+
+                    <p class="duracao">
+                        ⏱ 10 horas
+                    </p>
+
+
+                    <button
+                        class="botao-curso"
+                        data-curso="atendimento"
+                    >
+                        Inscrever-se
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 CURSO 7
+            ================================================== -->
+
+            <div class="curso-card">
+
+                <div class="curso-imagem">
+                    🚀
+                </div>
+
+
+                <div class="curso-conteudo">
+
+                    <span class="categoria">
+                        NEGÓCIOS
+                    </span>
+
+
+                    <h3>
+                        Empreendedorismo
+                    </h3>
+
+
+                    <p>
+                        Conheça os fundamentos para criar ideias,
+                        projetos e novos negócios.
+                    </p>
+
+
+                    <p class="duracao">
+                        ⏱ 15 horas
+                    </p>
+
+
+                    <button
+                        class="botao-curso"
+                        data-curso="empreendedorismo"
+                    >
+                        Inscrever-se
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ACESSO AOS EMPREGOS
+    ====================================================== -->
+
+    <section class="vagas-destaque">
+
+        <div>
+
+            <p class="subtitulo">
+                OPORTUNIDADES PROFISSIONAIS
+            </p>
+
+
+            <h2>
+                Conclua seus cursos e prepare-se para trabalhar.
+            </h2>
+
+
+            <p>
+                Depois de concluir um curso, você poderá acessar
+                oportunidades profissionais relacionadas à sua
+                formação e se candidatar aos empregos disponíveis.
+            </p>
+
+
+            <a
+                href="empregos.html"
+                class="botao-principal"
+            >
+                Ver empregos disponíveis →
+            </a>
+
+        </div>
+
+
+        <div class="vagas-destaque-icone">
+            💼
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DICA DO INSTITUTO
+    ====================================================== -->
+
+    <section class="vagas-ajuda">
+
+        <div>
+
+            <p class="subtitulo">
+                DICA DO INSTITUTO
+            </p>
+
+
+            <h2>
+                Ainda não encontrou uma oportunidade?
+            </h2>
+
+
+            <p>
+                Continue desenvolvendo suas habilidades por
+                meio dos cursos disponíveis. Ao concluir uma
+                formação, novas oportunidades relacionadas
+                ao seu aprendizado podem ser desbloqueadas.
+            </p>
+
+        </div>
+
+
+        <a
+            href="empregos.html"
+            class="botao-principal"
+        >
+            Ver empregos →
+        </a>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CHAMADA FINAL
+    ====================================================== -->
+
+    <section class="vagas-final">
+
+        <p class="subtitulo">
+            SUA JORNADA CONTINUA
+        </p>
+
+
+        <h2>
+            Capacitação e oportunidade caminham juntas.
+        </h2>
+
+
+        <p>
+            Desenvolva suas habilidades, mantenha seu perfil
+            atualizado e esteja preparado para novas
+            oportunidades profissionais.
+        </p>
+
+
+        <div class="hero-botoes">
+
+
+            <a
+                href="perfil.html"
+                class="botao-principal"
+            >
+                Meu perfil →
+            </a>
+
+
+            <a
+                href="empregos.html"
+                class="botao-secundario"
+            >
+                Ver empregos
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CURSOS CONCLUÍDOS
+    ====================================================== -->
+
+    <section
+        class="secao-cursos"
+        id="cursos-concluidos-secao"
+    >
+
+        <h2>
+            Cursos concluídos
+        </h2>
+
+
+        <div id="cursos-concluidos">
+
+            <p class="mensagem-sem-cursos">
+                Você ainda não concluiu nenhum curso.
+            </p>
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     RODAPÉ
+========================================================= -->
+
+<footer>
+
+    <p class="copyright">
+        © 2026 Instituto Reinserir —
+        Protótipo educacional
+    </p>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
